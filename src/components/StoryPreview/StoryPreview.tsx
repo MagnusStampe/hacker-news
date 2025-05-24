@@ -4,13 +4,9 @@ import { FC } from "react";
 import styles from "./StoryPreview.module.css";
 import ChatBubbleIcon from '@mui/icons-material/ChatBubbleOutlineOutlined';
 import FavoriteIcon from "@mui/icons-material/FavoriteBorderOutlined";
-import useStory from "@/hooks/useStory";
+import { Story } from "@/models/item";
 
-const StoryPreview: FC<{ id: number }> = ({ id }) => {
-    const { story, isError, isLoading } = useStory(id);
-
-    if(isError || isLoading || !story) return null;
-
+const StoryPreview: FC<{ story: Story }> = ({ story }) => {
     return (
         <div className={styles.card}>
             <p className={styles.createdAt}>{story.createdAt.toDateString()}</p>

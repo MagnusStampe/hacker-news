@@ -4,7 +4,7 @@ import StoryPreview from "@/components/StoryPreview/StoryPreview";
 import useStories from "@/hooks/useStories";
 
 const Home = () => {
-    const { storyIds, isError, isLoading } = useStories();
+    const { stories, isError, isLoading } = useStories();
 
     return (
         <div>
@@ -12,7 +12,7 @@ const Home = () => {
             {isError && <p>Something went wrong while loading stories...</p>}
             {isLoading && <p>Loading...</p>}
             {(!isError && !isLoading) && <>
-                {storyIds?.map(id => <StoryPreview key={"story-" + id} id={id} />)}
+                {stories?.map(story => <StoryPreview key={"story-" + story.id} story={story} />)}
             </>}
         </div>
     );

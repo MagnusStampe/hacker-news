@@ -1,9 +1,7 @@
-import { ItemResponse, Story, TopStoriesResponse } from "@/models/item";
-import { User, UserResponse } from "@/models/user";
+import { ItemResponse, Story } from "@/models/item";
 import useSWR from "swr";
 
 const useStory = (id: number) => {
-    // Types that can be undefined will be present on type 'story'
     const storyFromResponse = (response: ItemResponse): Story => ({
       id: response.id,
       commentCount: response.descendants,
