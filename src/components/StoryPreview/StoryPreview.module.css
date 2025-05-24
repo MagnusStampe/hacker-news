@@ -1,0 +1,38 @@
+.card {
+    border: 1px solid var(--text-color);
+    padding: var(--spacing-sm);
+    background-color: var(--background-contrast);
+    
+    display: grid;
+    gap: var(--spacing-sm);
+    grid-template-columns: 1fr 1fr;
+}
+
+.card + .card {
+    margin-top: var(--spacing-md);
+}
+
+.createdAt {
+    grid-column: 1 / 4;
+}
+
+.title {
+    grid-area: "title";
+    font-size: 1.2rem;
+    grid-column: 1 / 4;
+}
+
+.interactions {
+    display: flex;
+    align-items: flex-end;
+}
+
+.score, .comment, .user {
+    display: flex;
+    align-items: center;
+    margin-right: var(--spacing-sm);
+}
+
+.score > p, .comment > p {
+    margin-left: var(--spacing-sm);
+}
