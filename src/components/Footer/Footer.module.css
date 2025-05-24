@@ -1,0 +1,9 @@
+.footer {
+    padding: var(--spacing-md);
+    background-color: var(--background-contrast);
+}
+
+.footerText {
+    display: grid;
+    grid-gap: var(--spacing-sm);
+}

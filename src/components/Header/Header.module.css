@@ -1,5 +1,18 @@
 .header {
-    background-color: var(--primary);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    background-color: var(--background-contrast);
     width: 100vw;
-    height: 64px;
+    border-bottom: 3px solid var(--background);
+}
+
+.titleContainer {
+    height: 2.5rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--text-color);
+}
+
+.title {
+    font-size: 2rem;
 }

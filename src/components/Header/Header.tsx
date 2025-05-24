@@ -4,9 +4,14 @@ import Image from "next/image";
 
 const Header= () => {
     return (
-        <header className={styles.header}>
-            <Image src="/logo.png" alt="Hacker News logo" height={512} width={512} />
-        </header>
+        <div>
+            <header className={styles.header}>
+                <Image src="/logo.png" alt="Hacker News logo" height={82} width={82} />
+                <div className={styles.titleContainer}>
+                    <p className={styles.title}>Hacker News</p>
+                </div>
+            </header>
+        </div>
     );
 }
 
