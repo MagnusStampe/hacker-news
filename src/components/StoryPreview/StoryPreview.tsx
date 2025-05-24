@@ -5,6 +5,7 @@ import styles from "./StoryPreview.module.css";
 import ChatBubbleIcon from '@mui/icons-material/ChatBubbleOutlineOutlined';
 import FavoriteIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import { Story } from "@/models/item";
+import Link from "next/link";
 
 const StoryPreview: FC<{ story: Story }> = ({ story }) => {
     return (
@@ -21,7 +22,7 @@ const StoryPreview: FC<{ story: Story }> = ({ story }) => {
                     <p>{story.commentCount}</p>
                 </div>
             </div>
-            <button>Go to article</button>
+            <Link href={`/story/${story.id}`}>Go to article</Link>
         </div>
     );
 }

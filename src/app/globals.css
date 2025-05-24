@@ -44,11 +44,13 @@ h1, h2, h3, h4, h5, h6, p, span {
   margin: 0;
 }
 
-button {
+a {
   padding: var(--spacing-sm) var(--spacing-md);
   border-radius: 100px;
   background-color: var(--primary);
   color: var(--text-color);
   font-weight: 800;
+  text-decoration: none;
+  text-align: center;
   border: none;
 }
