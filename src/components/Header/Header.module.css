@@ -1,0 +1,5 @@
+.header {
+    background-color: var(--primary);
+    width: 100vw;
+    height: 64px;
+}
