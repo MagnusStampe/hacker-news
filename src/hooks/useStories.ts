@@ -9,7 +9,7 @@ const useStories = () => {
         commentIds: response.kids,
         score: response.score,
         body: response.text,
-        createdAt: new Date(response.time),
+        createdAt: new Date(response.time * 1000), // response is in seconds
         title: response.title,
         url: response.url
     });
