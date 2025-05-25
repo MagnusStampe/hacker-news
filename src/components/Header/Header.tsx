@@ -6,11 +6,13 @@ const Header = () => {
     return (
         <div>
             <header className={styles.header}>
-                <Link href="/">
-                    <Image src="/logo.png" alt="Hacker News logo" height={82} width={82} />
-                </Link>
-                <div className={styles.titleContainer}>
-                    <p className={styles.title}>Hacker News</p>
+                <div className={styles.content}>
+                    <Link href="/">
+                        <Image src="/logo.png" alt="Hacker News logo" height={82} width={82} />
+                    </Link>
+                    <div className={styles.titleContainer}>
+                        <p className={styles.title}>Hacker News</p>
+                    </div>
                 </div>
             </header>
         </div>

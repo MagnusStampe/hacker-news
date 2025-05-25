@@ -12,9 +12,11 @@ const Home = () => {
             <h1 className={styles.title}>Top trending stories</h1>
             {isError && <p>Something went wrong while loading stories...</p>}
             {isLoading && <p>Loading...</p>}
-            {(!isError && !isLoading) && <>
-                {stories?.map(story => <StoryPreview key={"story-" + story.id} story={story} />)}
-            </>}
+            {(!isError && !isLoading) && (
+                <div>
+                    {stories?.map(story => <StoryPreview key={"story-" + story.id} story={story} />)}
+                </div>
+            )}
         </div>
     );
 }

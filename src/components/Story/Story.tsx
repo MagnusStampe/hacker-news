@@ -14,7 +14,7 @@ const Story: FC<{ id: number }> = ({ id }) => {
     if(isError || isLoading || !story) return null;
 
     return (
-        <article>
+        <article className={styles.container}>
             <div className={styles.heroContainer}>
                 <Image priority src="/story-background.jpg" alt="Title background" className={styles.heroImage} width={1215} height={794} />
                 <h1 className={styles.title}>{story.title}</h1>

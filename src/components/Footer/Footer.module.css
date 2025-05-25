@@ -4,6 +4,8 @@
 }
 
 .footerText {
+    max-width: var(--content-max-width);
+    margin: 0 auto;
     display: grid;
     grid-gap: var(--spacing-sm);
 }

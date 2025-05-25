@@ -1,4 +1,5 @@
 .card {
+    max-width: 400px;
     border: 1px solid var(--text-color);
     padding: var(--spacing-sm);
     background-color: var(--background-contrast);

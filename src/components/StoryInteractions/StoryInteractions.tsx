@@ -9,11 +9,11 @@ const StoryInteractions: FC<{ story: Story }> = ({ story }) => {
         <div className={styles.interactions}>
             <div className={styles.score}>
                 <FavoriteIcon />
-                <p>{story.score}</p>
+                <p>{story.score || 0}</p>
             </div>
             <div className={styles.comment}>
                 <ChatBubbleIcon />
-                <p>{story.commentCount}</p>
+                <p>{story.commentCount || 0}</p>
             </div>
         </div>
     )

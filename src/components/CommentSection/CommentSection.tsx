@@ -11,14 +11,14 @@ const CommentSection: FC<{ ids: number[] }> = ({ ids }) => {
     if(isError || isLoading) return null;
 
     return (
-        <div>
-            {comments?.map(comment => (
+        <div className={styles.container}>
+            {comments?.filter(c => c.body).map(comment => (
                 <div key={"comment-" + comment.id} className={styles.comment}>
                     <div className={styles.user}>
                         <PersonIcon />
                         <p>{comment.writerId}</p>
                     </div>
-                    {comment.body && <div dangerouslySetInnerHTML={{ __html: comment.body }} />}
+                    {comment.body && <div className={styles.body} dangerouslySetInnerHTML={{ __html: comment.body }} />}
                     {comment.subCommentIds?.length > 0 && (
                         <div className={styles.subCommentSection}>
                             <CommentSection ids={comment.subCommentIds} />

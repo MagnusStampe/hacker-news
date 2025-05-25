@@ -1,3 +1,7 @@
+.container {
+    width: 100%;
+}
+
 .comment {
     margin-bottom: var(--spacing-md);
 }
@@ -6,7 +10,13 @@
     margin-top: var(--spacing-md);
 }
 
+.body {
+    background-color: var(--background-contrast);
+    padding: var(--spacing-sm);
+}
+
 .subCommentSection {
+    width: 100%;
     border-left: 2px solid var(--text-color);
     padding-left: var(--spacing-md);
     margin-top: var(--spacing-sm);
