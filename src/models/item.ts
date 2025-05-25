@@ -9,7 +9,7 @@ export interface ItemResponse {
     type: ItemTypes,
     by: string,
     time: number,
-    text: string, // HTML
+    text?: string, // HTML
     dead: boolean,
     parent: number, // ID
     poll: number, // ID
@@ -23,10 +23,11 @@ export interface ItemResponse {
 
 export interface Story {
     id: number,
+    writerId: string,
     commentCount: number,
     commentIds: number[],
     score: number,
-    body: string,
+    body?: string,
     createdAt: Date,
     title: string,
     url: string
@@ -34,9 +35,9 @@ export interface Story {
 
 export interface Comment {
     id: number,
-    by: User,
+    writerId: string,
     subCommentIds: number[],
     parentId: number,
-    body: string, // HTML
+    body?: string, // HTML
     createdAt: Date
 }

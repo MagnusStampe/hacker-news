@@ -1,0 +1,10 @@
+.container {
+    display: flex;
+    align-items: center;
+    margin-top: var(--spacing-md);
+}
+
+.image {
+    border-radius: 100px;
+    margin-right: var(--spacing-md);
+}

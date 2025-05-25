@@ -1,0 +1,12 @@
+.comment {
+    margin-bottom: var(--spacing-md);
+}
+
+.comment p {
+    margin-top: var(--spacing-md);
+}
+
+.subCommentSection {
+    border-left: 2px solid var(--text-color);
+    padding-left: var(--spacing-md);
+}

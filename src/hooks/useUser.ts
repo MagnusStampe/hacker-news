@@ -1,7 +1,7 @@
 import { User, UserResponse } from "@/models/user";
 import useSWR from "swr";
 
-const useUser = (id: number) => {
+const useUser = (id: string) => {
     const userFromResponse = (response: UserResponse): User => ({
         id: response.id,
         createdAt: new Date(response.created),

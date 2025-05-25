@@ -4,6 +4,7 @@ import useSWR from "swr";
 const useStory = (id: number) => {
     const storyFromResponse = (response: ItemResponse): Story => ({
       id: response.id,
+      writerId: response.by,
       commentCount: response.descendants,
       commentIds: response.kids,
       score: response.score,
