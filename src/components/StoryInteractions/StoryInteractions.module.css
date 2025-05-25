@@ -1,0 +1,14 @@
+.interactions {
+    display: flex;
+    align-items: flex-end;
+}
+
+.score, .comment {
+    display: flex;
+    align-items: center;
+    margin-right: var(--spacing-sm);
+}
+
+.score > p, .comment > p {
+    margin-left: var(--spacing-sm);
+}

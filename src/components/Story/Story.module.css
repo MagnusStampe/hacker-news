@@ -1,5 +1,7 @@
 .heroContainer {
     position: relative;
+    display: grid;
+    gap: var(--spacing-md);
     width: 100vw;
     padding: var(--spacing-lg) var(--spacing-md);
 }
@@ -17,6 +19,16 @@
 .title {
     position: relative;
     z-index: 1;
+}
+
+.details {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.createdAt {
+    font-style: italic;
 }
 
 .content {

@@ -3,7 +3,7 @@
 import { FC } from "react";
 import useUser from "@/hooks/useUser";
 import Image from "next/image";
-import styles from "./User.module.css";
+import styles from "./UserPreview.module.css";
 
 const UserPreview: FC<{ id: string }> = ({ id }) => {
     const { user, isError, isLoading } = useUser(id);
@@ -15,7 +15,7 @@ const UserPreview: FC<{ id: string }> = ({ id }) => {
             <Image src="/profile.jpg" alt="Hacker profile image" className={styles.image} height={48} width={48} />
             {user && (
                 <div>
-                    <p>{user.id}</p>
+                    <p className={styles.name}>{user.id}</p>
                     <p>Karma: {user.karma}</p>
                 </div>
             )}

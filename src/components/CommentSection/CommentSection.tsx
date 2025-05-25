@@ -13,7 +13,7 @@ const CommentSection: FC<{ ids: number[] }> = ({ ids }) => {
     return (
         <div>
             {comments?.map(comment => (
-                <div className={styles.comment}>
+                <div key={"comment-" + comment.id} className={styles.comment}>
                     <div className={styles.user}>
                         <PersonIcon />
                         <p>{comment.writerId}</p>
