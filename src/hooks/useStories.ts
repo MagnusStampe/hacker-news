@@ -1,4 +1,4 @@
-import { ItemResponse, Story } from "@/models/item";
+import { ItemResponse, Story, TopStoriesResponse } from "@/models/item";
 import useSWR from "swr";
 
 const useStories = () => {
@@ -14,8 +14,14 @@ const useStories = () => {
         url: response.url
     });
 
-    const fetcher = (url: string) => fetch(url).then(async (response) => response.json()).then(async response => {
-        const storyPromises = response.slice(0, 10).map(async (id: number) => await fetch(`https://hacker-news.firebaseio.com/v0/item/${id}.json`)
+    const fetcher = (url: string) => fetch(url).then(async (response) => response.json()).then(async (response: TopStoriesResponse) => {
+        // Not the most efficient randomization, but gets the job done for the scope of this asignment
+        const randomArray = response
+            .map(id => ({ id, sort: Math.random() }))
+            .sort((a, b) => a.sort - b.sort)
+            .map(({ id }) => id);
+
+        const storyPromises = randomArray.slice(0, 10).map(async (id: number) => await fetch(`https://hacker-news.firebaseio.com/v0/item/${id}.json`)
             .then(async (response) => response.json()));
             
         const responses: ItemResponse[] = await Promise.all(storyPromises);
