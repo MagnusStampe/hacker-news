@@ -1,3 +1,7 @@
 .title {
     margin-bottom: var(--spacing-md);
 }
+
+.pageContainer {
+    padding: var(--spacing-lg) var(--spacing-md);
+}

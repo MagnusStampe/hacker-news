@@ -2,6 +2,7 @@
     position: fixed;
     display: flex;
     align-items: center;
+    z-index: 100;
     background-color: var(--background-contrast);
     width: 100vw;
     border-bottom: 3px solid var(--background);

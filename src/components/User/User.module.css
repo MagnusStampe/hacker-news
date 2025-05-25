@@ -1,7 +1,6 @@
 .container {
     display: flex;
     align-items: center;
-    margin-top: var(--spacing-md);
 }
 
 .image {

@@ -22,7 +22,7 @@ const StoryPreview: FC<{ story: Story }> = ({ story }) => {
                     <p>{story.commentCount}</p>
                 </div>
             </div>
-            <Link href={`/story/${story.id}`}>Go to article</Link>
+            <Link href={`/story/${story.id}`} className="button">Go to article</Link>
         </div>
     );
 }

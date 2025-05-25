@@ -1,0 +1,28 @@
+.heroContainer {
+    position: relative;
+    width: 100vw;
+    padding: var(--spacing-lg) var(--spacing-md);
+}
+
+.heroImage {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: contrast(80%) grayscale(40%) brightness(0.7);
+}
+
+.title {
+    position: relative;
+    z-index: 1;
+}
+
+.content {
+    padding: var(--spacing-lg) var(--spacing-md);
+}
+
+.body > p {
+    margin-top: var(--spacing-sm);
+}

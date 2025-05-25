@@ -9,4 +9,17 @@
 .subCommentSection {
     border-left: 2px solid var(--text-color);
     padding-left: var(--spacing-md);
+    margin-top: var(--spacing-sm);
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--spacing-sm);
+}
+
+.user p {
+    margin: 0;
+    margin-left: var(--spacing-sm);
+    font-weight: 600;
 }
